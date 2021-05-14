@@ -22,8 +22,8 @@ window.addEventListener('load',()=>{
     }, 2800);
   }
   else{
-    document.querySelector(".wrapper").style.height =
-      "0";
+    document.querySelector(".wrapper").style.display =
+      "none";
   }
   
   sessionStorage.setItem("loaded", 'true');
