@@ -19,7 +19,7 @@ window.addEventListener('load',()=>{
     setTimeout(() => {
       pagetransition.style.animation =
         "transition-wrapper-loader 2s ease-in-out";
-    }, 2800);
+    }, 2500);
   }
   else{
     document.querySelector(".wrapper").style.display =
