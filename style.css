@@ -12,6 +12,7 @@
   overflow-x: hidden;
   text-decoration: none;
   scroll-behavior: smooth;
+  -webkit-user-drag: none;
 }
 ::-webkit-scrollbar {
   width: 5px;
