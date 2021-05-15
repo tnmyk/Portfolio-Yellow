@@ -138,6 +138,9 @@
   justify-content: center;
   transition: 0.5s;
 }
+.menu *{
+  overflow: hidden;
+}
 *{
   overflow-x: hidden;
 }
@@ -145,9 +148,10 @@ body {
   /* background-image: url(./images/grid-yellow.svg); */
   background-size: 100%;
   background-attachment: fixed;
-  height: 200vh;
+  min-height: 100vh;
   background-color:black;
 }
+
 
 .lock-scroll {
   height: 100vh;
@@ -240,14 +244,18 @@ header a {
 }
 
 .about-flex {
-  height: 102vh;
+  min-height: 102vh;
   background-color: black;
   padding: 1.5em 3em;
   display: flex;
 }
+
 .about-text {
+
   font-size: 20px;
   width: 60%;
+  /* min-height: 100vh; */
+  /* background-color: red; */
 }
 .text-paras {
   color: white;
@@ -280,6 +288,8 @@ header a {
   width: 40%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+
 }
 .clock {
   height: 300px;
@@ -377,7 +387,11 @@ font-size:0.75em;
   background:none;
   border: 1px solid white;
   font-size: 0.9em;
+  transition: 0.5s;
 }
+/* #send:hover{
+  transform:scale(1.1);
+} */
 
 
 #copy{
@@ -400,4 +414,36 @@ font-size:0.75em;
   50%{
     transform:scale(1.06);
   }
+}
+.thanks-page-body{
+  height:100vh;
+  background-color: black;
+  color:#faff01;
+ 
+}
+.thanks-main{
+  height:60vh;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.thanks-heading{
+  
+  font-size: 6em;
+  font-weight: 600;
+}
+.reaching-out{
+  font-size:1.5em;
+  font-weight: 500;
+}
+.backtohome{
+  position: absolute;
+  bottom: 10vh;
+  background:none;
+  border: none;
+  border: 1px solid white;
+  border-radius:5px;
+  font-size:1.3em;
+  padding:1em 10em;
 }

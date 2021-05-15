@@ -90,32 +90,33 @@ for(var i=0;i<navLinks.length;i++){
     })
 }
 
-var copyBtn = document.querySelector('#copy');
+// var copyBtn = document.querySelector('#copy');
 
-copyBtn.addEventListener('click', ()=>{
+// copyBtn.addEventListener('click', ()=>{
+//   copyBtn.classList.add('copy-active');
   
-  copyBtn.classList.add('copy-active');
-  
-  var email=document.createElement('textarea');
-    email.value="tanmaykachroo@gmail.com";
-  document.body.appendChild(email);
-  copyBtn.textContent="Copied!"
-  email.focus();
-   email.select();
-   document.execCommand("copy");
-   console.log("sdsa");
-   document.body.removeChild(email);    
-  setTimeout(() => {
-  copyBtn.classList.remove("copy-active");
+//   var email=document.createElement('textarea');
+//     email.value="tanmaykachroo@gmail.com";
+//   document.body.appendChild(email);
+//   copyBtn.textContent="Copied!"
+//   email.focus();
+//    email.select();
+//    document.execCommand("copy");
+//    console.log("sdsa");
+//    document.body.removeChild(email);    
+//   setTimeout(() => {
+//   copyBtn.classList.remove("copy-active");
     
-  }, 1000);
+//   }, 1000);
 
-})
+// })
 
 
 document.querySelector('#send').addEventListener('mouseenter',()=>{
   cursor.classList.add("active");
 })
-document.querySelector("#send").addEventListener("mouseenter", () => {
+document.querySelector("#send").addEventListener("mouseleave", () => {
   cursor.classList.remove("active");
 });
+
+
