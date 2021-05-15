@@ -7,7 +7,6 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 window.addEventListener('load',()=>{
-  console.log(sessionStorage.getItem("loaded"));
   
   if(sessionStorage.getItem('loaded')!='true'){
     document.querySelector(".wrapper").style.animation =
@@ -17,9 +16,10 @@ window.addEventListener('load',()=>{
     document.querySelector(".wrapper-text").style.animation =
       "wrapper-text 2.3s ease-out forwards 1.3s";
     setTimeout(() => {
-      pagetransition.style.animation =
-        "transition-wrapper-loader 2s ease-in-out";
-    }, 2600);
+      // pagetransition.style.animation =
+      //   "transition-wrapper-loader 2s ease-in-out";
+      pagetransition.classList.add('onloadpagetransition')
+    }, 2400);
   }
   else{
     document.querySelector(".wrapper").style.display =
@@ -69,7 +69,10 @@ for(var i=0;i<navLinks.length;i++){
         pagetransition.textContent = e.target.textContent;
         // pagetransition.style.animation =
         //   "transition-wrapper 1.6s ease-in-out";
+        pagetransition.classList.remove("onloadpagetransition");
         pagetransition.classList.add('transition-wrapper-active')
+        console.log(pagetransition)
+       
           menu.classList.remove("menu-open");
           menuBtn.classList.add("menu-close");
           menuOpen = false;
@@ -77,9 +80,11 @@ for(var i=0;i<navLinks.length;i++){
           document
             .getElementsByTagName("body")[0]
             .classList.remove("lock-scroll");
-        setTimeout(()=>{
+        
+          setTimeout(()=>{
             window.location.href = e.target.href;
         pagetransition.classList.remove("transition-wrapper-active");
+        console.log(pagetransition)
 
         },1600)
     })
@@ -106,3 +111,11 @@ copyBtn.addEventListener('click', ()=>{
   }, 1000);
 
 })
+
+
+document.querySelector('#send').addEventListener('mouseenter',()=>{
+  cursor.classList.add("active");
+})
+document.querySelector("#send").addEventListener("mouseenter", () => {
+  cursor.classList.remove("active");
+});
