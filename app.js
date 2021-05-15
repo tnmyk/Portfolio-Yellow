@@ -67,8 +67,9 @@ for(var i=0;i<navLinks.length;i++){
         e.preventDefault();
 
         pagetransition.textContent = e.target.textContent;
-        pagetransition.style.animation =
-          "transition-wrapper 1.6s ease-in-out forwards";
+        // pagetransition.style.animation =
+        //   "transition-wrapper 1.6s ease-in-out";
+        pagetransition.classList.add('transition-wrapper-active')
           menu.classList.remove("menu-open");
           menuBtn.classList.add("menu-close");
           menuOpen = false;
@@ -78,6 +79,30 @@ for(var i=0;i<navLinks.length;i++){
             .classList.remove("lock-scroll");
         setTimeout(()=>{
             window.location.href = e.target.href;
+        pagetransition.classList.remove("transition-wrapper-active");
+
         },1600)
     })
 }
+
+var copyBtn = document.querySelector('#copy');
+
+copyBtn.addEventListener('click', ()=>{
+  
+  copyBtn.classList.add('copy-active');
+  
+  var email=document.createElement('textarea');
+    email.value="tanmaykachroo@gmail.com";
+  document.body.appendChild(email);
+  copyBtn.textContent="Copied!"
+  email.focus();
+   email.select();
+   document.execCommand("copy");
+   console.log("sdsa");
+   document.body.removeChild(email);    
+  setTimeout(() => {
+  copyBtn.classList.remove("copy-active");
+    
+  }, 1000);
+
+})
