@@ -19,7 +19,7 @@ window.addEventListener('load',()=>{
       // pagetransition.style.animation =
       //   "transition-wrapper-loader 2s ease-in-out";
       pagetransition.classList.add('onloadpagetransition')
-    }, 2400);
+    }, 2600);
   }
   else{
     document.querySelector(".wrapper").style.display =
